@@ -1,0 +1,37 @@
+
+  <h5 class="alert alert-danger text-center">User Details</h5>
+
+  
+  <div *ngIf="isLoading" class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+  
+  <div *ngIf="!isLoading" class="container mt-3">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title ">{{ user.name }}</h5>
+        <h6 class="card-subtitle text-muted">{{ user.username }}</h6>
+      </div>
+      <div class="card-body">
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Phone:</strong> {{ user.phone }}</p>
+        <p><strong>Website:</strong> <a [href]="'http://' + user.website" target="_blank">{{ user.website }}</a></p>
+        <p><strong>Address:</strong></p>
+        <ul>
+          <li><strong>Street:</strong> {{ user.address.street }}</li>
+          <li><strong>Suite:</strong> {{ user.address.suite }}</li>
+          <li><strong>City:</strong> {{ user.address.city }}</li>
+          <li><strong>Zipcode:</strong> {{ user.address.zipcode }}</li>
+        </ul>
+        <p><strong>Company:</strong></p>
+        <ul>
+          <li><strong>Name:</strong> {{ user.company.name }}</li>
+          <li><strong>CatchPhrase:</strong> {{ user.company.catchPhrase }}</li>
+          <li><strong>BS:</strong> {{ user.company.bs }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

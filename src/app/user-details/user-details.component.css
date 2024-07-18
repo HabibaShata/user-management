@@ -1,0 +1,15 @@
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .user-details-container {
+    margin-top: 20px;
+  }
+  
+  .card {
+    margin: 20px;
+  }
+  
